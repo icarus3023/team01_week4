@@ -27,7 +27,10 @@
       </properties>
     </profile>
   </profiles> 
-
+<properties>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <sonar.language>java</sonar.language>
+</properties>
 <dependencies>
   	<dependency>
   		<groupId>junit</groupId>
