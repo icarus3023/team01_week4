@@ -25,7 +25,7 @@ public class Testing {
 		Calculator cal1 = new Calculator(); //assertEquals(a,b)
 		cal1.grade = 1;
 		cal1.line = 1;
-		assertEquals(cal1.calline(),0.0);	
+		assertEquals(Math.abs(cal1.calline()),Math.abs(0));	
 	}
 	@Test
 	public void testcalminute(){
