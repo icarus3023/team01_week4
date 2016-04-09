@@ -20,7 +20,13 @@ public class Testing {
 		cal2.line = 4;
 		assertTrue(cal2.calline()==34);
 	}
-	
+	@Test
+	public void testonelinegoldcalline(){
+		Calculator cal1 = new Calculator(); //assertEquals(a,b)
+		cal.grade = 1;
+		cal1.line = 1;
+		assertEquals(cal1.calline(),0);	
+	}
 	@Test
 	public void testcalminute(){
 		Calculator cal3 = new Calculator();//assertEquals(a,b)
