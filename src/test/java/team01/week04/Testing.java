@@ -44,7 +44,7 @@ public class Testing {
 	public void testcalminutesilvernoaddline(){
 		Calculator cal = new Calculator();//assertEquals(a,b)
 		cal.grade = 2;
-		cal.time = 700;
+		cal.time = 300;
 		assertTrue((cal.calminute()-29.95)<0.1&&(cal.calminute()-29.95)>=0);
 	}
 	@Test
@@ -52,7 +52,7 @@ public class Testing {
 		Calculator cal = new Calculator();//assertEquals(a,b)
 		cal.grade = 2;
 		cal.time = 1200;
-		assertTrue((cal.calminute()-137.95)<0.1&&(cal.calminute()-137.95)>=0);
+		assertTrue((cal.calminute()-407.95)<0.1&&(cal.calminute()-407.95)>=0);
 	}
 	@Test
 	public void testcalminuteerror(){
