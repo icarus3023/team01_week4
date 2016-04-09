@@ -87,7 +87,7 @@ public class Calculator {
 		        cal.time= Integer.parseInt(line.split(" ")[1]);
 		        cal.line= Integer.parseInt(line.split(" ")[2]);
 			logInfo.info(cal.result());
-			question = yn.next();
+
 			logInfo.info("\n");
 		}
 		br.close();
