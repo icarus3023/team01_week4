@@ -110,4 +110,9 @@ public class Testing {
 		int temp = (int)cal.money();
 		assertTrue(temp==63);
 	}
+	@Test
+	public void testcreatecal(){
+		Calculator cal = new Calculator();
+		assertNotNull(cal);
+	}
 }
