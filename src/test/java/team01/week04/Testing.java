@@ -23,7 +23,7 @@ public class Testing {
 	@Test
 	public void testonelinegoldcalline(){
 		Calculator cal1 = new Calculator(); //assertEquals(a,b)
-		call.grade = 1;
+		cal1.grade = 1;
 		cal1.line = 1;
 		assertEquals(cal1.calline(),0);	
 	}
