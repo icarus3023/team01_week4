@@ -73,7 +73,7 @@ public class Calculator {
 	}
 
 	@SuppressWarnings("resource")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		 final Logger logInfo = Logger.getLogger(
 				    Thread.currentThread().getStackTrace()[0].getClassName() );
 		BufferedReader br = new BufferedReader(new FileReader("/src/Out.txt"));
