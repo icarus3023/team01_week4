@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 import java.io.FileInputStream;
 import java.io.IOException;
-
+import java.io.BufferedReader;
 
 public class Calculator {
 	int grade;
@@ -82,9 +82,9 @@ public class Calculator {
 	            	if (line==null) break;
 	            	System.out.println(line);
 	            	//등급,통화시간 회선개수추가 
-		        cal.grade= line.split(" ")[0];
-		        cal.time= line.split(" ")[1];
-		        cal.line= line.split(" ")[2];
+		        cal.grade= Integer.parseInt(line.split(" ")[0]);
+		        cal.time= Integer.parseInt(line.split(" ")[1]);
+		        cal.line= Integer.parseInt(line.split(" ")[2]);
 			logInfo.info(cal.result());
 			question = yn.next();
 			logInfo.info("\n");
