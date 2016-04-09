@@ -2,7 +2,8 @@ package team01.week04;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
-
+import java.io.FileInputStream;
+import java.io.IOException;
 
 
 public class Calculator {
@@ -74,25 +75,20 @@ public class Calculator {
 	public static void main(String[] args) {
 		 final Logger logInfo = Logger.getLogger(
 				    Thread.currentThread().getStackTrace()[0].getClassName() );
+		BufferedReader br = new BufferedReader(new FileReader("/src/out.txt"));
 		for (;;) {
 			Calculator cal = new Calculator();
-			Scanner gradesc = new Scanner(System.in);
-			Scanner timesc = new Scanner(System.in);
-			Scanner linesc = new Scanner(System.in);
-			Scanner yn = new Scanner(System.in);
-			String question;
-			logInfo.info("등급을 입력하세요 : Gold(1), Silver(2) : ");
-			cal.grade = gradesc.nextInt();
-			logInfo.info("통화 시간을 적어주세요(분) : ");
-			cal.time = timesc.nextInt();
-			logInfo.info("회선 개수를 적어주세요 : ");
-			cal.line = linesc.nextInt();
+	        	String line = br.readLine();
+	            	if (line==null) break;
+	            	System.out.println(line);
+	            	//등급,통화시간 회선개수추가 
+		        cal.grade= line.split(" ")[0];
+		        cal.time= line.split(" ")[1];
+		        cal.line= line.split(" ")[2];
 			logInfo.info(cal.result());
-			logInfo.info("계속 진행하시겠습니까?(y/n) : ");
 			question = yn.next();
 			logInfo.info("\n");
-			if ("n".equals(question))
-				break;
 		}
+		br.close();
 	}
 }
