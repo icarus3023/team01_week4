@@ -53,7 +53,7 @@ public class Testing {
 		Calculator cal = new Calculator();//assertEquals(a,b)
 		cal.grade = 2;
 		cal.time = 700;
-		assertEquals(cal.addminute(),200;
+		assertEquals(cal.addminute(),200);
 	}
 	@Test
 	public void testcalminutegoldnoaddline(){
