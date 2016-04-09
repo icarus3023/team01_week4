@@ -8,9 +8,9 @@ public class Testing {
 
 	@Test
 	public void testaddline(){
-		Calculator cal1 = new Calculator(); //assertEquals(a,b)
-		cal1.line = 5;
-		assertEquals(cal1.addline(),2);
+		Calculator cal = new Calculator(); //assertEquals(a,b)
+		cal.line = 5;
+		assertEquals(cal.addline(),2);
 	}
 
 	@Test
@@ -18,21 +18,21 @@ public class Testing {
 		Calculator cal = new Calculator();//assertEquals(a,b)
 		cal.grade = 1;
 		cal.line = 4;
-		assertTrue(cal2.calline()==34);
+		assertTrue(cal.calline()==34);
 	}
 	@Test
 	public void testonelinegoldcalline(){
 		Calculator cal = new Calculator(); //assertEquals(a,b)
 		cal.grade = 1;
 		cal.line = 1;
-		assertTrue(cal1.calline()==0.0);	
+		assertTrue(cal.calline()==0.0);	
 	}
 	@Test
 	public void testcalminutegoldnoaddline(){
 		Calculator cal = new Calculator();//assertEquals(a,b)
 		cal.grade = 1;
 		cal.time = 878;
-		assertTrue((cal3.calminute()-49.95)<0.1&&(cal3.calminute()-49.95)>=0);
+		assertTrue((cal.calminute()-49.95)<0.1&&(cal.calminute()-49.95)>=0);
 	}
 	@Test
 	public void testcalminutegoldexistaddline(){
@@ -42,12 +42,20 @@ public class Testing {
 		assertTrue((cal.calminute()-107.1)<0.1&&(cal.calminute()-107.1)>=0);
 	}
 	@Test
+	@ignore
+	public void testcalminutesilvernoaddline(){
+		Calculator cal = new Calculator();//assertEquals(a,b)
+		cal.grade = 1;
+		cal.time = 700;
+		assertTrue((cal.calminute()-107.1)<0.1&&(cal.calminute()-107.1)>=0);
+	}
+	@Test
 	public void testmoney(){		
 		Calculator cal = new Calculator();//assertEquals(a,b)
 		cal.grade = 2;
 		cal.line = 2;
 		cal.time = 523;
-		int temp = (int)cal4.money();
+		int temp = (int)cal.money();
 		assertTrue(temp==63);
 	}
 }
